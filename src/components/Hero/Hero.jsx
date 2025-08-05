@@ -19,7 +19,7 @@ const ImageList = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ handleOrderPopup }) => {
   const [imageId, setImageId] = React.useState(BiryaniImg1);
 
   const bgImage = {
@@ -56,7 +56,10 @@ const Hero = () => {
                 Foodie – A modern restaurant website for browsing menus, ordering food, and booking tables with ease.
               </p>
               <div>
-                <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                <button
+                  className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                  onClick={handleOrderPopup}
+                >
                   Order Now
                 </button>
               </div>
